@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    background-color: #EAE7DC;
+
+}
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+header a h1 {
+    color: #fff;
+    text-decoration: underline;
+    text-decoration-color: grey;
+}
+header a:hover h1 {
+    color: #fff;
+    text-decoration-color:white;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.panel {
+    flex: 1;
+    min-width: 300px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.5s ease-in-out;
+    position: relative /* prý pro nastavení toho textu */
+}
+
+.panel img {
+    width: 100%;
+    display: block;
+    transition: transform 0.5s ease-in-out;
+    position: relative; /* allows z-index to work on hover */
+}
+
+.panel img:hover {
+    transform: scale(1.1);
+    z-index: 2;
+    filter: brightness(0.7);
+}
+
+.contacts {
+    text-align: center;
+    padding: 20px;
+}
+.contacts a {
+    color: #333;
+    text-decoration: underline;
+}
+.text-overlay {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+color: rgb(187, 187, 187);
+font-size: 2.8rem;
+pointer-events: none; /* prevents interfering with hover */
+transition: transform 0.5s ease, color 0.5s ease, font-size 0.5s ease;
+z-index: 3;
+font-weight: bold;
+}
+.panel:hover .text-overlay {
+    transform: translate(-50%, -50%) scale(1.2);
+    color: #ffffff; /* pick any color you like */
+    font-size: 3.1rem; /* increase the font size */
+    z-index: 3; /* bring the text to the front */
+}
