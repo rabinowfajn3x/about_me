@@ -1,0 +1,123 @@
+
+<!-- filepath: /home/rabinow/Documents/code/html/about_me/programovani.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Discord Bot Showcase</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #36393f;
+      margin: 0;
+      padding: 2rem;
+      color: #dcddde;
+    }
+    .discord-window {
+      background-color: #2f3136;
+      border-radius: 8px;
+      width: 400px;
+      padding: 1rem;
+      margin: 0 auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+    .message {
+      display: flex;
+      align-items: center;
+      margin: 0.5rem 0;
+    }
+    .avatar {
+      width: 40px;
+      height: 40px;
+      background: #7289da;
+      border-radius: 50%;
+      margin-right: 0.5rem;
+    }
+    .bubble {
+      background-color: #4f545c;
+      border-radius: 8px;
+      padding: 0.5rem 1rem;
+      max-width: 80%;
+      word-break: break-word;
+    }
+    .typing {
+      width: 30px;
+      height: 10px;
+      background: url('data:image/gif;base64,R0lGODlhGQANAKEAAAAAAP///wAAACH/C05FVFNDQVBFMi4wAwEAAAAh+QQFCgACACwAAAAAGQANAAACI4yPaclpGN5gXKnzISJ3yChNFAgAh+QQFCgACACwAAAAAGQANAAACOwyPaxt2WsM36nQGHuXg7CDPEwA7') no-repeat;
+      background-size: cover;
+    }
+    .discord-input {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    background-color: #4f545c;
+    padding: 0.5rem;
+    border-radius: 8px;
+  }
+
+  .discord-input input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: #dcddde;
+    font-size: 1rem;
+    outline: none;
+  }
+  </style>
+</head>
+<body>
+  <div class="discord-window">
+    <div class="message">
+      <div class="avatar"></div>
+      <div class="bubble" id="user-message"></div>
+    </div>
+    <div class="message" id="thinking-message" style="display: none;">
+      <div class="avatar"></div>
+      <div class="bubble"><span class="typing"></span></div>
+    </div>
+    <div class="message" id="response-message" style="display: none;">
+      <div class="avatar"></div>
+      <div class="bubble">Server is spinning up now...</div>
+    </div>
+    <div class="discord-input">
+        <input type="text" id="discord-command" placeholder="Message #general" />
+      </div>
+  </div>
+
+  <script>
+    const userMessage = document.getElementById('user-message');
+    const thinkingMsg = document.getElementById('thinking-message');
+    const responseMsg = document.getElementById('response-message');
+    const textToType = "Hey bot, please launch a Minecraft server!";
+    let i = 0;
+
+    
+    const inputToType = "Ok bot, do something else!";
+    let j = 0;
+
+    function typeCommand() {
+      const cmdInput = document.getElementById('discord-command');
+      if (j < inputToType.length) {
+        cmdInput.value += inputToType.charAt(j);
+        j++;
+        setTimeout(typeCommand, 50);
+      } else {
+        // Show a new response (or reuse your existing logic)
+        setTimeout(() => {
+          thinkingMsg.style.display = 'flex';
+          setTimeout(() => {
+            thinkingMsg.style.display = 'none';
+            responseMsg.style.display = 'flex';
+            responseMsg.querySelector('.bubble').textContent = "Bot has processed your new command.";
+          }, 2000);
+        }, 1000);
+      }
+    }
+
+    // Delay before typing the new command
+    setTimeout(typeCommand, 5000);
+
+    typeMessage();
+  </script>
+</body>
+</html>
