@@ -2,7 +2,8 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     overflow-x: hidden; /* Prevent horizontal scroll */
-    background-color: #EAE7DC;
+    /* background-color: #EAE7DC; */
+    background-color: black;
 
 }
 header {
@@ -32,6 +33,32 @@ header a:hover h1 {
     transition: transform 0.5s ease-in-out;
     position: relative /* prý pro nastavení toho textu */
 }
+.photos {
+    display: flex;
+  }
+  
+.photos .column {
+width: 50%;
+box-sizing: border-box;
+/* padding: 46px; */
+}
+.photos img {
+
+    width: 90%;
+    height: auto; /* maintain aspect ratio */
+    display: block;
+    transition: transform 0.5s ease-in-out;
+    position: relative; /* allows z-index to work on hover */
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    padding: 8px;
+    margin: 46px;
+}
+.photos img:hover {
+    transform: scale(1.1);
+    z-index: 2;
+}  
 
 .panel img {
     width: 100%;
