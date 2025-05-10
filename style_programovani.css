@@ -36,3 +36,20 @@ nav, footer {
   .video-column {
     margin-left: auto;
   }
+
+  @media (max-width: 600px) {
+    .showcase_bota {
+        flex-direction: column;
+    }
+    .video-column {
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+    .video-column video {
+        max-width: 100%;
+        height: auto;
+    }
+    body {
+        overflow-x: hidden;
+    }
+}
