@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #323138;
-    color: #B9BBBE;
+    color: #f5f5f5;
     font-family: sans-serif;
 }
 
@@ -12,11 +12,27 @@ nav, footer {
     padding: 1rem;
 }
 
-a {
-    color: #7289DA;
-    text-decoration: none;
+
+.text-column h1 {
+    font-size: 5rem;
+    font-weight: bold;
 }
 
-a:hover {
+.text-column h2 {
+    font-size: 2rem;
+    margin-left: 1rem;
+}
+
+.contacts a {
+    color: #fff;
     text-decoration: underline;
 }
+.showcase_bota {
+    display: flex;
+  }
+  .text-column {
+    flex: 1;
+  }
+  .video-column {
+    margin-left: auto;
+  }
