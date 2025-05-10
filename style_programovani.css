@@ -1,0 +1,55 @@
+/* Basic Discord-like Dark Theme */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #323138;
+    color: #f5f5f5;
+    font-family: sans-serif;
+}
+
+nav, footer {
+    background-color: #2F3136;
+    padding: 1rem;
+}
+
+
+.text-column h1 {
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+.text-column h2 {
+    font-size: 2rem;
+    margin-left: 1rem;
+}
+
+.contacts a {
+    color: #fff;
+    text-decoration: underline;
+}
+.showcase_bota {
+    display: flex;
+  }
+  .text-column {
+    flex: 1;
+  }
+  .video-column {
+    margin-left: auto;
+  }
+
+  @media (max-width: 600px) {
+    .showcase_bota {
+        flex-direction: column;
+    }
+    .video-column {
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+    .video-column video {
+        max-width: 100%;
+        height: auto;
+    }
+    body {
+        overflow-x: hidden;
+    }
+}
