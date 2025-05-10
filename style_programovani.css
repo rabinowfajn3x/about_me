@@ -1,0 +1,22 @@
+/* Basic Discord-like Dark Theme */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #323138;
+    color: #B9BBBE;
+    font-family: sans-serif;
+}
+
+nav, footer {
+    background-color: #2F3136;
+    padding: 1rem;
+}
+
+a {
+    color: #7289DA;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
