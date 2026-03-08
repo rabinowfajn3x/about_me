@@ -1,2 +1,6 @@
 IMG*
 *.pdf
+txt
+oktava/
+nohup.out
+server_errors.log
