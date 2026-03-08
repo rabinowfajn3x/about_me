@@ -259,6 +259,18 @@ font-weight: bold;
         grid-template-rows: auto;
         grid-auto-rows: 200px;
     }
+    .photo-item.portrait {
+        grid-column: span 1;
+        grid-row: span 2;
+    }
+    .photo-item.landscape {
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+    .photo-item.link_to_all_photos {
+        grid-column: span 2;
+        grid-row: span 1;
+    }
 }
 
 
