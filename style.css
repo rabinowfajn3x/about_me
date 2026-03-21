@@ -342,7 +342,6 @@ font-weight: bold;
     object-fit: cover;
     border-radius: 12px;
     box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-    cursor: pointer;
     transition: transform 0.3s ease;
 }
 
@@ -362,7 +361,6 @@ font-weight: bold;
     height: auto;
     border-radius: 12px;
     box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-    cursor: pointer;
     transition: transform 0.3s ease;
 }
 
