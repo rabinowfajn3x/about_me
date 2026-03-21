@@ -23,10 +23,7 @@ nav, footer {
     margin-left: 1rem;
 }
 
-.contacts a {
-    color: #fff;
-    text-decoration: underline;
-}
+
 .showcase_bota {
     display: flex;
   }
@@ -37,19 +34,89 @@ nav, footer {
     margin-left: auto;
   }
 
-  @media (max-width: 600px) {
-    .showcase_bota {
-        flex-direction: column;
-    }
-    .video-column {
-        margin-left: 0;
-        margin-top: 1rem;
-    }
-    .video-column video {
-        max-width: 100%;
-        height: auto;
-    }
-    body {
-        overflow-x: hidden;
-    }
+.transition {
+    height: 100px;
+    background: linear-gradient(to bottom, #323138 0%, transparent 100%);
+    position: relative;
+    z-index: 1;
+    margin-bottom: -100px;
+    pointer-events: none;
 }
+
+.transition2 {
+    height: 100px;
+    background: linear-gradient(to bottom, transparent 100%, #ffffff 100%);
+    position: relative;
+    z-index: 1;
+    margin-top: -100px;
+    pointer-events: none;
+}
+
+.casino{
+    background: linear-gradient(135deg, #0c0c1e 0%, #1a1a3e 50%, #0c0c1e 100%);
+    padding-top: 100px;
+}
+
+.casino h1 {
+    font-family: 'Playfair Display', serif;
+    color: #d4af37;
+    font-size: 5rem;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 2px;
+}
+
+.casino h3 {
+    color: #d4af37;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+    font-size: 2rem;
+}
+
+.casino button {
+    padding: 0.75rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    background: linear-gradient(145deg, #d4af37, #8b4513);
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+    letter-spacing: 2px;}
+
+.casino img{
+    width: 800px;
+    height: auto;
+}
+
+.contacts {
+    text-align: center;
+    padding-top:100px;
+    padding: 20px;
+    background-color: white;
+    color: black;
+}
+.contacts a {
+    color: #333;
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+.showcase_bota {
+    flex-direction: column;
+}
+.video-column {
+    margin-left: 0;
+    margin-top: 1rem;
+}
+.video-column video {
+    max-width: 100%;
+    height: auto;
+}
+body {
+    overflow-x: hidden;
+}
+}
+
