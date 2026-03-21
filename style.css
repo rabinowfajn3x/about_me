@@ -70,7 +70,7 @@ header a:hover h1 {
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: space-between;
-    margin: 0 8rem
+    margin: 0 8rem;
   }
   
 
@@ -314,7 +314,7 @@ font-weight: bold;
 .product-row {
     display: flex;
     align-items: center;    
-    /* max-height: 400px; */
+    max-height: 400px;
     justify-content: space-between;
     margin-bottom: 80px; /* Space between rows (not visually separated by lines) */
     gap: 60px;
@@ -329,6 +329,7 @@ font-weight: bold;
     display: flex;
     gap: 15px;
     align-items: stretch;
+    height: 400px;
 }
 
 .product-photos .main-photo {
@@ -357,8 +358,9 @@ font-weight: bold;
 }
 
 .product-photos .side-photos img {
-    width: 100%;
-    height: auto;
+    width: 100%;    
+    height: calc(50% - 7.5px);
+    object-fit: cover;
     border-radius: 12px;
     box-shadow: 0 4px 16px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
@@ -391,9 +393,11 @@ font-weight: bold;
     .product-row, .product-row.reverse-row {
         flex-direction: column-reverse;
         align-items: stretch; /* Prevents text and elements from centering horizontally */
+        max-height: none;
     }
     .product-photos {
         flex-direction: column;
+        height: auto;
     }
     .product-photos .main-photo img {
         height: auto; /* Fixes the main image not showing up */
@@ -408,5 +412,9 @@ font-weight: bold;
         flex: 1;
         min-width: 0;
         object-fit: cover;
+    }
+
+    .photos{
+        margin: 0 0rem
     }
 }
