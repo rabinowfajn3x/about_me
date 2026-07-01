@@ -212,7 +212,12 @@ font-weight: bold;
 }
 
 .fotky_jedny_akce--velka {
-    grid-template-rows: repeat(6, 1fr);  /* was 3, now 6 */
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    min-height: 0; /* Important for flex child to not overflow */
+    grid-template-rows: repeat(8, 1fr);  /* was 3, now 8 */
 }
 
 .photo-item {
