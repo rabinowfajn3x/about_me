@@ -175,7 +175,19 @@ font-weight: bold;
     border-radius: 16px;
     height: calc(100vh - 160px);
     box-sizing: border-box;
+    
+}
+
+#maturak26 {
     background: linear-gradient(135deg, #b7ade6 0%, #FFB6C1 100%);
+}
+
+#dofe26 {
+    background: linear-gradient(135deg, #a9ec89 0%, #85c3fd 100%);
+}
+
+#svatba26 {
+    background: linear-gradient(135deg, #f7fa47 0%, #fa79de 100%);
 }
 
 .fotky_jedny_akce {
@@ -185,6 +197,22 @@ font-weight: bold;
     grid-template-rows: repeat(3, 1fr);
     gap: 15px;
     min-height: 0; /* Important for flex child to not overflow */
+}
+
+.jedna_akce--velka {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    padding: 20px;
+    margin-bottom:0px ;
+    border: solid 1px #0e0e0e;
+    border-radius: 16px;
+    box-sizing: border-box;
+    height: calc(266vh - 160px);
+}
+
+.fotky_jedny_akce--velka {
+    grid-template-rows: repeat(6, 1fr);  /* was 3, now 6 */
 }
 
 .photo-item {
